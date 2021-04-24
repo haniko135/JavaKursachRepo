@@ -1,0 +1,28 @@
+#header{
+    background-color: #3E97D1;
+}
+#menu{
+    background-color: #3E97D1;
+}
+#main_block{
+    background-color: rgb(228, 228, 228);
+}
+#footer{
+    background-color: #3E97D1;
+}
+a{
+    color: black
+}
+a:hover{
+    color:#222222;
+}
+.info_block:hover{
+    box-shadow: 5px 3px 5px rgb(151, 151, 151);
+}
+.desc{
+    background-color: #0A67A3;
+}
+.button{
+    background-color: rgb(116, 116, 194);
+    border: 2px solid black;
+}

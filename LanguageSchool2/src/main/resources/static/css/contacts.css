@@ -1,0 +1,14 @@
+#main_block > ul{
+    font-size: 27px;
+}
+.map{
+    align-self: center;
+    margin: 10px;
+}
+li > b, li > a > b{
+    text-decoration: underline;
+}
+li{
+    margin: 5px;
+    list-style-type: none;
+}

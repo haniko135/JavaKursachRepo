@@ -2,9 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Курсы</title>
-    <link rel="stylesheet" href="css/courses.css">
+    <title>Вопросы</title>
+    <link rel="stylesheet" href="css/ask.css">
     <link rel="stylesheet" href="css/color.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <header id="header">
@@ -14,25 +15,17 @@
     </header>
     <nav id="menu">
         <a href="courses.html">курсы</a>
-        <a href="asks.html">вопросы</a>
+        <a href="#">вопросы</a>
         <a href="contacts.html">контакты</a>
         <a href="#">вход в кабинет</a>
     </nav>
     <main id="main_block">
+        <p>Часто задаваемые вопросы</p>
         <div class="info_block" th:each="type : ${types}">
-            <div class="image">
-                <img th:src="@{'/img/' + ${type.image}}">
-            </div>
             <div class="desc">
-                <span th:text="${type.description}"></span>
-                <div class="button_wrapper">
-                    <div class="button">
-                        <a th:href="${type.buttonDesc}">Подробнее</a>
-                    </div>
-                    <div class="button">
-                        <a th:href="${type.buttonDesc}">Пройти тест</a>
-                    </div>
-                </div>
+                <span class="question" th:text="${type.question}"></span>
+                <hr>
+                <span class="respond" th:text="${type.answer}"></span>
             </div>
         </div>
     </main>
@@ -42,16 +35,16 @@
                 <a href="/">InterLanguage</a>
             </div>
             <div class="hrefs">
-                <a href="#">курсы</a>
-                <a href="asks.html">вопросы</a>
+                <a href="courses.html">курсы</a>
+                <a href="#">вопросы</a>
                 <a href="contacts.html">контакты</a>
                 <a href="#">вход в кабинет</a>
             </div>
         </div>
         <div class="soc_net">
-            <a href="http://vk.com/haniko135"><img src="/img/vk.png"></a>
-            <a href="http:/instagram.com"><img src="/img/insta.png"></a>
+            <a href="http://vk.com/haniko135"><img src="img/vk.png"></a>
+            <a href="http:/instagram.com"><img src="img/insta.png"></a>
         </div>
     </footer>
 </body>
-</html>
+</html> 

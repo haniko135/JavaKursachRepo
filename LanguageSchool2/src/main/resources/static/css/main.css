@@ -89,15 +89,12 @@
     }
 
     .desc{
+        font-size: 20px;
         background-color: #0A67A3;
         padding: 5px;
         margin-top: 5px;
         height: 100%;
         max-width: inherit;
-    }
-
-    .desc > span{
-        font-size: 20px;
     }
     
     .button_wrapper{
@@ -140,7 +137,6 @@
         grid-area: header;
         display: flex;
         padding: 15px 15px 15px 35px;
-        background-color: #3E97D1;
     }
     #menu{
         grid-area: nav;
@@ -149,7 +145,6 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        background-color: #3E97D1;
     }
     #main_block{
         grid-area: main;
@@ -157,22 +152,17 @@
         padding: 10px;
         flex-direction: row;
         justify-content: space-around;
-        background-color: rgb(241, 241, 241);
     }
     #footer{
         grid-area: footer;
         display: flex;
         padding: 7px;
-        justify-content: start;
-        background-color: #3E97D1;
+        justify-content: space-around;
     }
 
     a{
         text-decoration: none;
         color: black
-    }
-    a:hover{
-        color:#222222;
     }
 
     #header > div{
@@ -197,7 +187,6 @@
         margin: 10px;
     }
     .info_block:hover{
-        transform: scale(1.02);
         box-shadow: 5px 3px 5px rgb(151, 151, 151);
     }
 
@@ -210,7 +199,6 @@
     }
 
     .desc{
-        background-color: #0A67A3;
         padding: 5px;
         margin-top: 5px;
         height: 100%;
@@ -229,8 +217,6 @@
         margin: 15px 5px 15px 5px;
     }
     .button{
-        background-color: rgb(116, 116, 194);
-        border: 2px solid black;
         border-radius: 15px;
         padding: 10px;
     }
