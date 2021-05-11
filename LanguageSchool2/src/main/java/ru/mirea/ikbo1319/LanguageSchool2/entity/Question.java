@@ -1,8 +1,8 @@
 package ru.mirea.ikbo1319.LanguageSchool2.entity;
 
-import org.hibernate.annotations.Type;
-
 import javax.persistence.*;
+
+// добавить lombok
 
 @Entity(name="question")
 public class Question {
@@ -11,11 +11,9 @@ public class Question {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Type(type = "text")
     private String question;
 
     @Column(length = 65535)
-    @Type(type = "text")
     private String answer;
 
     public Question() {

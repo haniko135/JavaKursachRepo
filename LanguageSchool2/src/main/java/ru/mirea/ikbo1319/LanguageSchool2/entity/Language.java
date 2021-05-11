@@ -1,9 +1,8 @@
 package ru.mirea.ikbo1319.LanguageSchool2.entity;
 
-import org.hibernate.annotations.Type;
-
 import javax.persistence.*;
 
+// добавить lombok
 
 @Entity(name="Language")
 public class Language {
@@ -17,8 +16,14 @@ public class Language {
     private String image;
 
     @Column(length = 65535)
-    @Type(type = "text")
     private String description;
+
+    //@Column(length = 65535)
+    //private String largeDescription;
+
+    //private String pluses;
+
+    private String name_title;
 
     private String buttonTest;
 
@@ -73,5 +78,13 @@ public class Language {
 
     public void setButtonDesc(String buttonDesc) {
         this.buttonDesc = buttonDesc;
+    }
+
+    public String getName_title() {
+        return name_title;
+    }
+
+    public void setName_title(String name_title) {
+        this.name_title = name_title;
     }
 }

@@ -5,6 +5,10 @@
     align-self: center;
     margin: 10px;
 }
+.map:hover{
+    box-shadow: 10px 7px 10px #222222;
+    transform: scale(1.05);
+}
 li > b, li > a > b{
     text-decoration: underline;
 }

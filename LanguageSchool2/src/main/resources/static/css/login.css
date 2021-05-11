@@ -1,0 +1,18 @@
+#main_block > p.login_head{
+    margin: 30px 0px 10px 0px;
+}
+#main_block > p.under_login_head{
+    font-weight: 100;
+    font-size: 25px;   
+}
+#main_block > p.registr{
+    font-weight: 100;
+    font-size: 20px;
+}
+.registr > a{
+    text-decoration: underline;
+    color: rgb(18, 115, 180);
+}
+.registr > a:hover{
+    text-decoration: none;
+}

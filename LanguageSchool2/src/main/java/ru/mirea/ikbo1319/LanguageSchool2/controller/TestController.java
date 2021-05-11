@@ -4,10 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import ru.mirea.ikbo1319.LanguageSchool2.entity.Language;
 import ru.mirea.ikbo1319.LanguageSchool2.entity.Question;
 import ru.mirea.ikbo1319.LanguageSchool2.repository.LanguageRepo;
 import ru.mirea.ikbo1319.LanguageSchool2.repository.QuestionRepo;
+
+import java.security.Principal;
+import java.util.Optional;
 
 @Controller
 public class TestController {
@@ -39,8 +44,10 @@ public class TestController {
         return "asks";
     }
 
-    @GetMapping("contacts.html")
-    public String contacts(Model model){
-        return "contacts";
-    }
+    //@GetMapping("/{button_desc}")
+    //public String getDesc(Model model){
+        //Iterable<Language> types = languageRepo.findAll();
+        //model.addAttribute("types", types);
+        //return "";
+    //}
 }

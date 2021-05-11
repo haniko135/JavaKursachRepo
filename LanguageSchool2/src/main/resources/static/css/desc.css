@@ -1,0 +1,59 @@
+#main_block > h2{
+    align-self: center;
+    font-size: 55px;
+    margin: 15px 0px 65px 0px;
+}
+#main_block > p{
+    margin: 15px 70px 65px 70px;
+    font-size: 26px;
+}
+#main_block > .pluses{
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+#main_block > ul{
+    margin: 10px 70px 15px 70px;
+    font-size: 26px;
+}
+#main_block > ul > li{
+    margin: 15px 10px 25px 70px;
+    font-size: 23px;
+}
+#main_block > .test_begin_head{
+    align-self: center;
+    font-weight: bolder;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+#main_block > .desc_test{
+    font-size: 23px;
+    margin: 15px 70px 65px 70px;
+}
+#main_block > .attent{
+    align-self: center;
+    font-size: 35px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.button-wrap{
+    align-self: center;
+    justify-content: center;
+    padding: 5px;
+    width: 450px;
+    height: 100px;
+}
+.buttons{
+    border: 2px solid #3b3b3b;
+    width: 450px;
+    height: auto;
+    background-color: #0A67A3;
+    display: flex;
+    padding: 15px;
+}
+.buttons > a{
+    font-size: 48px;
+    font-weight: normal;
+    align-self: center;
+}
