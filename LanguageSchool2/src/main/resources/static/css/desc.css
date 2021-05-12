@@ -12,11 +12,11 @@
     font-size: 28px;
     margin-bottom: 10px;
 }
-#main_block > ul{
+#main_block > ol{
     margin: 10px 70px 15px 70px;
     font-size: 26px;
 }
-#main_block > ul > li{
+#main_block > ol > li{
     margin: 15px 10px 25px 70px;
     font-size: 23px;
 }
@@ -37,23 +37,33 @@
     font-weight: bold;
 }
 
+a{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .button-wrap{
+    display: flex;
     align-self: center;
     justify-content: center;
     padding: 5px;
     width: 450px;
     height: 100px;
+    border: 2px solid #3b3b3b;
+    background-color: #0A67A3;
+}
+.button-wrap:hover{
+    transform: scale(1.05);
+    background-color: #1f8bd2;
+    box-shadow: 10px 7px 10px rgb(151, 151, 151);
 }
 .buttons{
-    border: 2px solid #3b3b3b;
-    width: 450px;
+    width: 150px;
     height: auto;
-    background-color: #0A67A3;
     display: flex;
+    align-self: center;
     padding: 15px;
-}
-.buttons > a{
     font-size: 48px;
     font-weight: normal;
-    align-self: center;
+    text-align: center;
 }

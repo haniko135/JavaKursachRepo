@@ -44,10 +44,22 @@ public class TestController {
         return "asks";
     }
 
-    //@GetMapping("/{button_desc}")
-    //public String getDesc(Model model){
-        //Iterable<Language> types = languageRepo.findAll();
-        //model.addAttribute("types", types);
-        //return "";
-    //}
+    @GetMapping("desc")
+    public String getDesc(@RequestParam("id") Long id ,Model model, Model desc){
+        Optional<Language> lang = languageRepo.findById(id);
+        Iterable<Language> types = languageRepo.findAll();
+        desc.addAttribute("lang", lang);
+        model.addAttribute("types", types);
+        return "desc";
+    }
+
+
+    @GetMapping("test_begin")
+    public String getTestBegin(@RequestParam("id") Long id ,Model model, Model test){
+        Optional<Language> lang = languageRepo.findById(id);
+        Iterable<Language> types = languageRepo.findAll();
+        test.addAttribute("lang", lang);
+        model.addAttribute("types", types);
+        return "test_begin";
+    }
 }

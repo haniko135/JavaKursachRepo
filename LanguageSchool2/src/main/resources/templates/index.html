@@ -38,10 +38,10 @@
                     <span th:text="${type.description}"></span>
                     <div class="button_wrapper">
                         <div class="button">
-                            <a th:href="@{${type.buttonDesc}}">Подробнее</a>
+                            <a th:href="@{'desc?id=' + ${type.getId()}}">Подробнее</a>
                         </div>
                         <div class="button">
-                            <a th:href="${type.buttonTest}">Пройти тест</a>
+                            <a th:href="@{'test_begin?id=' + ${type.getId()}}">Пройти тест</a>
                         </div>
                     </div>
                 </div>
