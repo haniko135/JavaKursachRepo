@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Тест</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/courses.css">
-        <link rel="stylesheet" href="../css/color.css">
-        <link rel="stylesheet" href="../css/desc.css">
+        <link rel="stylesheet" href="css/desc.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/color.css">
         <script src="js/functions.js"></script>
         <!---Иконки для менюшки-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,30 +17,30 @@
                 <a href="/">InterLanguage</a>
             </div>
         </header>
-
         <div id="menuBar">
             <div class="icon-bar">
                 <a href="#" onclick="dropMenu()" id="menuIcon"><i class="fa fa-bars"></i></a>
             </div>
         </div>
-
         <nav id="menu">
             <a href="courses.html">курсы</a>
             <a href="asks.html">вопросы</a>
             <a href="contacts.html">контакты</a>
-            <a href="login.html">вход в кабинет</a>
+            <a href="login.html">войти</a>
         </nav>
         <main id="main_block">
-            <p class="test_begin_head">Тест на знание украинского языка</p>
-            <div class="desc_test">
-                балбалбалбалбалаблаббалбалбалба
-            </div> <!--поставить мем?-->
-            <p class="attent">на тест даётся 40 минут</p>
-            <div class="button-wrap">
-                <div class="buttons">
-                    <a href="#">Начать</a>
+            <div>
+                <iframe th:src="${lang.get().getTestLink()}" width="700" height="600" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+                <div style="display: flex; align-self: center;">
+                    <a href="/" style="display: block">
+                        <div class="button-wrap">
+                            <div class="buttons">
+                                На главную
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </div> <!--кнопка-->
+            </div>
         </main>
         <footer id="footer">
             <div class="text_wrapper">
@@ -55,8 +55,8 @@
                 </div>
             </div>
             <div class="soc_net">
-                <a href="http://vk.com/haniko135"><img src="../img/vk.png"></a>
-                <a href="http:/instagram.com"><img src="../img/insta.png"></a>
+                <a href="http://vk.com/haniko135"><img src="img/vk.png"></a>
+                <a href="http:/instagram.com"><img src="img/insta.png"></a>
             </div>
         </footer>
     </body>

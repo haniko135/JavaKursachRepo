@@ -63,7 +63,14 @@ a{
     display: flex;
     align-self: center;
     padding: 15px;
-    font-size: 48px;
+    font-size: 38px;
     font-weight: normal;
     text-align: center;
+}
+
+.image_test{
+    align-self: center;
+    width: 35%;
+    height: 35%;
+    display: flex;
 }

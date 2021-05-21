@@ -27,15 +27,14 @@
             <a href="asks.html">вопросы</a>
             <a href="contacts.html">контакты</a>
             <a href="login.html">войти</a>
-            <a href="registration.html">регистрация</a>
         </nav>
         <main id="main_block">
             <div class="info_block" th:each="type : ${types}">
                 <div class="image">
-                    <img th:src="@{'/img/' + ${type.image}}">
+                    <img th:src="@{'/img/' + ${type.getImage()}}">
                 </div>
                 <div class="desc">
-                    <span th:text="${type.description}"></span>
+                    <span th:text="${type.getDescription()}"></span>
                     <div class="button_wrapper">
                         <div class="button">
                             <a th:href="@{'desc?id=' + ${type.getId()}}">Подробнее</a>

@@ -3,6 +3,7 @@ package ru.mirea.ikbo1319.LanguageSchool2.entity;
 //import org.springframework.security.core.GrantedAuthority;
 //import org.springframework.security.core.userdetails.UserDetails;
 
+
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Set;
@@ -17,8 +18,10 @@ public class Users {                //implements UserDetails
     private String username;
 
     private String password;
+
     @Transient
     private String passwordConfirm;
+
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Roles> roles;
 

@@ -84,10 +84,10 @@
         flex-direction: column;
         height: auto;
         width: auto;
-        margin: 10px 5px 10px 5px;
+        margin: 10px 5px;
     }
     .info_block:hover{
-        transform: scale(1.02);
+        transform: scale(1.05);
         box-shadow: 5px 3px 5px rgb(151, 151, 151);
     }
 
@@ -171,6 +171,7 @@
     }
     #menuBar{
         visibility: hidden;
+        display: none;
     }
     #menu{
         grid-area: nav;

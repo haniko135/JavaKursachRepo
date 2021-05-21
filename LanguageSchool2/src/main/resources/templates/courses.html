@@ -36,13 +36,13 @@
                 <img th:src="@{'/img/' + ${type.image}}">
             </div>
             <div class="desc">
-                <span th:text="${type.description}"></span>
+                <span th:text="${type.getDescription()}"></span>
                 <div class="button_wrapper">
                     <div class="button">
-                        <a th:href="${type.buttonDesc}">Подробнее</a>
+                        <a th:href="@{'desc?id=' + ${type.getId()}}">Подробнее</a>
                     </div>
                     <div class="button">
-                        <a th:href="${type.buttonDesc}">Пройти тест</a>
+                        <a th:href="@{'test_begin?id=' + ${type.getId()}}">Пройти тест</a>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                 <a href="/">InterLanguage</a>
             </div>
             <div class="hrefs">
-                <a href="#">курсы</a>
+                <a href="courses.html">курсы</a>
                 <a href="asks.html">вопросы</a>
                 <a href="contacts.html">контакты</a>
                 <a href="login.html">вход в кабинет</a>

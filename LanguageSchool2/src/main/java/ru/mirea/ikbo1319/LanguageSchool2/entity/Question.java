@@ -1,10 +1,15 @@
 package ru.mirea.ikbo1319.LanguageSchool2.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 // добавить lombok
 
 @Entity(name="question")
+@Getter
+@Setter
 public class Question {
 
     @Id
@@ -19,27 +24,4 @@ public class Question {
     public Question() {
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
-    }
-
-    public String getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer;
-    }
 }

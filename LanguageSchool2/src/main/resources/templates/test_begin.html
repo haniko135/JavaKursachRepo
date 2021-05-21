@@ -3,9 +3,9 @@
     <head>
         <title>Тест</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/courses.css">
-        <link rel="stylesheet" href="../css/color.css">
-        <link rel="stylesheet" href="../css/desc.css">
+        <link rel="stylesheet" href="css/courses.css">
+        <link rel="stylesheet" href="css/color.css">
+        <link rel="stylesheet" href="css/desc.css">
         <script src="js/functions.js"></script>
         <!---Иконки для менюшки-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,8 +36,9 @@
                 Для прохождения теста иметь знания по языку не обязательно. Можно (и нужно) воспринимать тест с
                 долей юмора :)
             </div> <!--поставить мем?-->
-            <p class="attent">на тест даётся 40 минут</p>
-            <a href="#">
+            <img class="image_test" th:src="@{'/img/' + ${lang.get().getImageTest()}}">
+            <p class="attent">Желаем удачи!</p>
+            <a th:href="@{'test_page?id=' + ${lang.get().getId()}}">
                 <div class="button-wrap">
                     <div class="buttons">
                         Начать
