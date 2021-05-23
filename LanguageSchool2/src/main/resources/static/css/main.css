@@ -222,7 +222,7 @@
         margin: 10px;
     }
     .info_block:hover{
-        box-shadow: 5px 3px 5px rgb(151, 151, 151);
+        transform: scale(1.01);
     }
 
     .image{
@@ -250,6 +250,10 @@
         justify-content:space-around;
         align-items: center;
         margin: 15px 5px 15px 5px;
+    }
+    .button:hover{
+        transform: scale(1.2);
+        border: none;
     }
     .button{
         border-radius: 15px;

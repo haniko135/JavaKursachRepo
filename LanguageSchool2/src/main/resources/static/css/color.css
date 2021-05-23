@@ -7,7 +7,10 @@
 #menu{
     background-color: #3E97D1;
 }
-#menu > a:hover{
+#menu > a:hover,
+#footer > .text_wrapper > .head_text:hover,
+#footer > .text_wrapper > .hrefs:hover,
+#footer > .soc_net > a:hover{
     background-color: #65b2e6;
 }
 #main_block{
@@ -25,11 +28,15 @@ a:hover{
 }
 .info_block:hover{
     box-shadow: 5px 3px 5px rgb(151, 151, 151);
+    background-color: rgb(151, 151, 151);
 }
 .desc{
     background-color: #0A67A3;
 }
 .button{
-    background-color: rgb(116, 116, 194);
+    background-color: rgba(123, 177, 231, 0.91);
     border: 2px solid black;
+}
+.button:hover{
+    background-color: rgba(159, 208, 250, 0.91);
 }

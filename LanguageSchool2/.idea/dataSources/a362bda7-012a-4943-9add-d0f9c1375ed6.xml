@@ -1416,7 +1416,7 @@ true posix/WET
 false posix/Zulu
 true posixrules
 </TimeZones>
-      <StartupTime>1621513871</StartupTime>
+      <StartupTime>1621762186</StartupTime>
     </root>
     <database id="2" parent="1" name="first">
       <ObjectId>16384</ObjectId>
@@ -1431,7 +1431,7 @@ true posixrules
 13111||-9223372036854775808|U|G
 13111||10|U|G</Grants>
       <Owner>user1</Owner>
-      <IntrospectionStateNumber>662</IntrospectionStateNumber>
+      <IntrospectionStateNumber>722</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16385|16387|1
 sequence|table|16395|16397|1
@@ -1505,7 +1505,7 @@ sequence|table|41001|41003|1
       <Comment>standard public schema</Comment>
       <StateNumber>287</StateNumber>
       <Owner>user1</Owner>
-      <IntrospectionStateNumber>663</IntrospectionStateNumber>
+      <IntrospectionStateNumber>723</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="18" parent="2" name="plpgsql">
@@ -1634,20 +1634,20 @@ sequence|table|41001|41003|1
       <Owner>user1</Owner>
       <StateNumber>500</StateNumber>
     </table>
-    <table id="35" parent="17" name="role">
-      <ObjectId>24597</ObjectId>
-      <Owner>user1</Owner>
-      <StateNumber>517</StateNumber>
-    </table>
-    <table id="36" parent="17" name="t_role">
+    <table id="35" parent="17" name="t_role">
       <ObjectId>40996</ObjectId>
       <Owner>user1</Owner>
-      <StateNumber>577</StateNumber>
+      <StateNumber>718</StateNumber>
+    </table>
+    <table id="36" parent="17" name="t_roles">
+      <ObjectId>65574</ObjectId>
+      <Owner>user1</Owner>
+      <StateNumber>673</StateNumber>
     </table>
     <table id="37" parent="17" name="t_user">
       <ObjectId>41003</ObjectId>
       <Owner>user1</Owner>
-      <StateNumber>578</StateNumber>
+      <StateNumber>670</StateNumber>
     </table>
     <table id="38" parent="17" name="t_user_roles">
       <ObjectId>41011</ObjectId>
@@ -1792,46 +1792,16 @@ sequence|table|41001|41003|1
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>515</StateNumber>
+      <StateNumber>574</StateNumber>
       <TypeId>20</TypeId>
     </column>
     <column id="60" parent="35" name="name">
-      <Position>2</Position>
+      <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>515</StateNumber>
+      <StateNumber>718</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="61" parent="35" name="role_pkey">
-      <ObjectId>24600</ObjectId>
-      <StateNumber>515</StateNumber>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-      <Primary>1</Primary>
-      <AccessMethodId>403</AccessMethodId>
-      <CollationIds>0</CollationIds>
-      <ClassIds>3124</ClassIds>
-    </index>
-    <key id="62" parent="35" name="role_pkey">
-      <ObjectId>24601</ObjectId>
-      <StateNumber>515</StateNumber>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>role_pkey</UnderlyingIndexName>
-    </key>
-    <column id="63" parent="36" name="id">
-      <Position>1</Position>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>574</StateNumber>
-      <TypeId>20</TypeId>
-    </column>
-    <column id="64" parent="36" name="name">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>574</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="65" parent="36" name="t_role_pkey">
+    <index id="61" parent="35" name="t_role_pkey">
       <ObjectId>40999</ObjectId>
       <StateNumber>574</StateNumber>
       <ColNames>id</ColNames>
@@ -1841,14 +1811,37 @@ sequence|table|41001|41003|1
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="66" parent="36" name="t_role_pkey">
+    <key id="62" parent="35" name="t_role_pkey">
       <ObjectId>41000</ObjectId>
       <StateNumber>574</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>t_role_pkey</UnderlyingIndexName>
     </key>
-    <column id="67" parent="37" name="id">
+    <column id="63" parent="36" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>672</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="64" parent="36" name="roles">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>672</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <foreign-key id="65" parent="36" name="fksgq4ifnlnxgq6oea4khaeoier">
+      <ObjectId>65577</ObjectId>
+      <StateNumber>673</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>41003</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>t_user</RefTableName>
+      <RefKeyName>t_user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="66" parent="37" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1856,17 +1849,24 @@ sequence|table|41001|41003|1
       <TypeId>20</TypeId>
       <IdentityKind>by-default</IdentityKind>
     </column>
-    <column id="68" parent="37" name="password">
+    <column id="67" parent="37" name="password">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>575</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="69" parent="37" name="username">
+    <column id="68" parent="37" name="username">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>575</StateNumber>
       <TypeId>1043</TypeId>
+    </column>
+    <column id="69" parent="37" name="active">
+      <Position>4</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>670</StateNumber>
+      <TypeId>16</TypeId>
     </column>
     <index id="70" parent="37" name="t_user_pkey">
       <ObjectId>41009</ObjectId>

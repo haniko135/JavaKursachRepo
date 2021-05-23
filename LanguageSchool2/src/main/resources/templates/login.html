@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3" type="text/html"
+      xmlns:c="http://www.w3.org/1999/XSL/Transform">
     <head>
         <meta http-equiv="Content-Type" charset="utf-8">
-        <link rel="stylesheet" href="css/ask.css">
-        <link rel="stylesheet" href="css/login.css">
-        <link rel="stylesheet" href="css/color.css">
+        <link rel="stylesheet" type="text/css" href="css/ask.css">
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="stylesheet" type="text/css" href="css/color.css">
         <title>Авторизация</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -14,45 +16,36 @@
             <div>
                 <a href="/">InterLanguage</a>
             </div>
-            </header>
-            <nav id="menu">
-                <a href="courses.html">курсы</a>
-                <a href="asks.html">вопросы</a>
-                <a href="contacts.html">контакты</a>
-                <a href="#">вход в кабинет</a>
-            </nav>
-            <main id="main_block">
-                <p class="login_head">Авторизация</p>
-                <p class="under_login_head">Войдите в личный кабинет или зарегистрируйтесь в один клик!</p>
-
-                </div>
-                <form method='POST' action="/login">
-                    <label>Логин</label>
-                    <input type="text" name="username" placeholder="username">
-                    <label>Пароль</label>
-                    <input type="password" name="password">
-                    <input type="submit" name="submit" value="Войти">
-                </form>
-                <p class="registr">Зарегистрироваться можно <a href="registration.html">здесь</a></p>
-
-
+        </header>
+        <nav id="menu">
+            <a href="/courses">курсы</a>
+            <a href="/asks">вопросы</a>
+            <a href="/contacts">контакты</a>
+        </nav>
+        <main id="main_block">
+            <p class="login_head">Авторизация</p>
+            <p class="under_login_head">Войдите на сайт или зарегистрируйтесь в один клик!</p>
+            <form class="autoriz" method='POST' th:action="@{/login}">
+                <label>Логин</label>
+                <input class="fields" type="text" name="username" placeholder="username">
                 <br>
-                Username/pass:
-                <ul>
-                    <li>dbuser1/123</li>
-                    <li>dbadmin1/123</li>
-                </ul>
+                <label>Пароль</label>
+                <input class="fields" type="password" name="password" placeholder="password">
+                <br>
+                <input class="buttonss" type="submit" name="submit" value="Войти">
+            </form>
+            <p class="registr">Зарегистрироваться можно <a th:href="@{/registration}">здесь</a></p>
+
             </main>
             <footer id="footer">
                 <div class="text_wrapper">
                     <div class="head_text">
-                        <a href="index.html">InterLanguage</a>
+                        <a href="/">InterLanguage</a>
                     </div>
                     <div class="hrefs">
-                        <a href="courses.html">курсы</a>
-                        <a href="asks.html">вопросы</a>
-                        <a href="contacts.html">контакты</a>
-                        <a href="#">вход в кабинет</a>
+                        <a href="/courses">курсы</a>
+                        <a href="/asks">вопросы</a>
+                        <a href="/contacts">контакты</a>
                     </div>
                 </div>
                 <div class="soc_net">

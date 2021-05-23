@@ -186,7 +186,7 @@
         grid-area: footer;
         display: flex;
         padding: 7px;
-        justify-content: start;
+        justify-content: space-around;
     }
 
     a{
@@ -216,6 +216,7 @@
     }
     .info_block:hover{
         transform: scale(1.02);
+        box-shadow: 5px 3px 5px rgb(151, 151, 151);
     }
 
     .image{

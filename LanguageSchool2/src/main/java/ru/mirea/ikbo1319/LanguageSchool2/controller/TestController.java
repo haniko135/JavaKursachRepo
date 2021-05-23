@@ -29,21 +29,21 @@ public class TestController {
         return "index";
     }
 
-    @GetMapping("courses.html")
+    @GetMapping("/courses")
     public String courses(Model model){
         Iterable<Language> types = languageRepo.findAll();
         model.addAttribute("types", types);
         return "courses";
     }
 
-    @GetMapping("asks.html")
+    @GetMapping("/asks")
     public String asks(Model model){
         Iterable<Question> types = questionRepo.findAll();
         model.addAttribute("types", types);
         return "asks";
     }
 
-    @GetMapping("desc")
+    @GetMapping("/desc")
     public String getDesc(@RequestParam("id") Long id ,Model model, Model desc){
         Optional<Language> lang = languageRepo.findById(id);
         Iterable<Language> types = languageRepo.findAll();
@@ -53,14 +53,14 @@ public class TestController {
     }
 
 
-    @GetMapping("test_begin")
+    @GetMapping("/test_begin")
     public String getTestBegin(@RequestParam("id") Long id ,Model model, Model test){
         Optional<Language> lang = languageRepo.findById(id);
         test.addAttribute("lang", lang);
         return "test_begin";
     }
 
-    @GetMapping("test_page")
+    @GetMapping("/test_page")
     public String getTestPage(@RequestParam("id") Long id ,Model model, Model test){
         Optional<Language> lang = languageRepo.findById(id);
         test.addAttribute("lang", lang);

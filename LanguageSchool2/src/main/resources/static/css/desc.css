@@ -23,32 +23,37 @@
 #main_block > .test_begin_head{
     align-self: center;
     font-weight: bolder;
-    font-size: 35px;
+    font-size: 45px;
     margin-bottom: 20px;
 }
 #main_block > .desc_test{
-    font-size: 23px;
+    font-size: 33px;
     margin: 15px 70px 65px 70px;
 }
 #main_block > .attent{
     align-self: center;
     font-size: 35px;
-    margin-bottom: 25px;
-    font-weight: bold;
+    margin: 25px 0;
+    font-weight: lighter;
 }
 
+.wrap{
+    display: flex;
+    align-items: center;
+    margin: 35px 0 25px 0;
+    justify-content: center;
+    width: auto;
+}
 a{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .button-wrap{
     display: flex;
     align-self: center;
     justify-content: center;
     padding: 5px;
-    width: 450px;
-    height: 100px;
+    width: 350px;
+    height: 70px;
     border: 2px solid #3b3b3b;
     background-color: #0A67A3;
 }
@@ -56,6 +61,7 @@ a{
     transform: scale(1.05);
     background-color: #1f8bd2;
     box-shadow: 10px 7px 10px rgb(151, 151, 151);
+    border: none;
 }
 .buttons{
     width: 150px;

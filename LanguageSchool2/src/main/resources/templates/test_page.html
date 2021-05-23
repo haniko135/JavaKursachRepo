@@ -10,6 +10,56 @@
         <!---Иконки для менюшки-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .wrap{
+                display:flex;
+                flex-direction: column;
+                align-content: space-around;
+            }
+            .butons{
+                display: flex;
+                align-items: center;
+                margin: 35px 0 25px 0;
+                justify-content: space-around;
+                width: auto;
+            }
+            .butons > form{
+                align-self: center;
+            }
+            .butons > form > input{
+                background-color: #0A67A3 ;
+                border: 2px solid #3b3b3b;
+                width: 190px;
+                height: 50px;
+                font-size: 25px;
+            }
+            .button-wrapping{
+                display: flex;
+                align-self: center;
+                justify-content: center;
+                padding: 5px;
+                width: 200px;
+                height: 50px;
+                border: 2px solid #3b3b3b;
+                background-color: #0A67A3;
+            }
+            .button-wrapping:hover{
+                transform: scale(1.05);
+                background-color: #1f8bd2;
+                box-shadow: 10px 7px 10px rgb(151, 151, 151);
+            }
+            .butonss{
+                width: 190px;
+                height: auto;
+                align-self: center;
+                font-size: 25px;
+                font-weight: normal;
+                text-align: center;
+            }
+            a{
+                display: block;
+            }
+        </style>
     </head>
     <body>
         <header id="header">
@@ -23,21 +73,23 @@
             </div>
         </div>
         <nav id="menu">
-            <a href="courses.html">курсы</a>
-            <a href="asks.html">вопросы</a>
-            <a href="contacts.html">контакты</a>
-            <a href="login.html">войти</a>
+            <a href="/courses">курсы</a>
+            <a href="/asks">вопросы</a>
+            <a href="/contacts">контакты</a>
         </nav>
         <main id="main_block">
-            <div>
+            <div class="wrap">
                 <iframe th:src="${lang.get().getTestLink()}" width="700" height="600" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
-                <div style="display: flex; align-self: center;">
-                    <a href="/" style="display: block">
-                        <div class="button-wrap">
-                            <div class="buttons">
+                <div class="butons">
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" value="Выйти">
+                    </form>
+                    <a href="/">
+                        <div class="button-wrapping">
+                            <div class="butonss">
                                 На главную
                             </div>
-                        </div>
+                        </div> <!--кнопка-->
                     </a>
                 </div>
             </div>
@@ -48,10 +100,9 @@
                     <a href="/">InterLanguage</a>
                 </div>
                 <div class="hrefs">
-                    <a href="courses.html">курсы</a>
-                    <a href="asks.html">вопросы</a>
-                    <a href="contacts.html">контакты</a>
-                    <a href="login.html">вход в кабинет</a>
+                    <a href="/courses">курсы</a>
+                    <a href="/asks">вопросы</a>
+                    <a href="/contacts">контакты</a>
                 </div>
             </div>
             <div class="soc_net">

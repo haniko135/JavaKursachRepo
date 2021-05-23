@@ -25,10 +25,9 @@
         </div>
 
         <nav id="menu">
-            <a href="courses.html">курсы</a>
-            <a href="asks.html">вопросы</a>
-            <a href="contacts.html">контакты</a>
-            <a href="login.html">вход в кабинет</a>
+            <a href="/courses">курсы</a>
+            <a href="/asks">вопросы</a>
+            <a href="/contacts">контакты</a>
         </nav>
         <main id="main_block">
             <p class="test_begin_head" th:text="${lang.get().getTestName()}"></p>
@@ -37,14 +36,16 @@
                 долей юмора :)
             </div> <!--поставить мем?-->
             <img class="image_test" th:src="@{'/img/' + ${lang.get().getImageTest()}}">
-            <p class="attent">Желаем удачи!</p>
-            <a th:href="@{'test_page?id=' + ${lang.get().getId()}}">
-                <div class="button-wrap">
-                    <div class="buttons">
-                        Начать
-                    </div>
-                </div> <!--кнопка-->
-            </a>
+            <p class="attent">Для начала теста нужно авторизироваться</p>
+            <div class="wrap">
+                <a th:href="@{'test_page?id=' + ${lang.get().getId()}}">
+                    <div class="button-wrap">
+                        <div class="buttons">
+                            Начать
+                        </div>
+                    </div> <!--кнопка-->
+                </a>
+            </div>
         </main>
         <footer id="footer">
             <div class="text_wrapper">
@@ -52,10 +53,9 @@
                     <a href="/">InterLanguage</a>
                 </div>
                 <div class="hrefs">
-                    <a href="courses.html">курсы</a>
-                    <a href="asks.html">вопросы</a>
-                    <a href="contacts.html">контакты</a>
-                    <a href="login.html">вход в кабинет</a>
+                    <a href="/courses">курсы</a>
+                    <a href="/asks">вопросы</a>
+                    <a href="/contacts">контакты</a>
                 </div>
             </div>
             <div class="soc_net">

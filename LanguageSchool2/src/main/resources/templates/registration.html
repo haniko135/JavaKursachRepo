@@ -1,49 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:form="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Регистрация</title>
+    <link rel="stylesheet" type="text/css" href="css/ask.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/color.css">
 </head>
 <body>
     <header id="header">
         <div>
-            <a href="index.html">InterLanguage</a>
+            <a href="/">InterLanguage</a>
         </div>
     </header>
     <nav id="menu">
-        <a href="courses.html">курсы</a>
-        <a href="asks.html">вопросы</a>
-        <a href="contacts.html">контакты</a>
-        <a href="#">вход в кабинет</a>
+        <a href="/courses">курсы</a>
+        <a href="/asks">вопросы</a>
+        <a href="/contacts">контакты</a>
     </nav>
     <main id="main_block">
-        <form:form method="post" modelAttribute="userForm">
-            <p class="login_head">Регистрация</p>
-            <form>
-                <label>Логин</label>
-                <input type="text" path="username" placeholder="Логин" autofocus="true">
-            </form>
-            <form>
-                <label>Пароль</label>
-                <input type="password" path="password" placeholder="Пароль">
-            </form>
-            <form>
-                <label>Повторите пароль</label>
-                <input type="password" path="passwordConfirm" placeholder="Подтвердите пароль">
-            </form>
-            <button type="submit">Зарегистрироваться</button>
-        </form:form>
+        <p class="login_head">Регистрация</p>
+        <form class="autoriz" th:action="@{/registration}" method="post">
+            <label>Логин</label>
+            <input class="fields" type="text" name="username" placeholder="Логин" autofocus="true">
+            <label>Пароль</label>
+            <input class="fields" type="password" name="password" placeholder="Пароль">
+            <label>Подтвердите пароль</label>
+            <input class="fields" type="password" name="passwordConfirm" placeholder="Подтверждение пароля">
+            <input class="buttonss" type="submit" value="Зарегистрироваться">
+        </form>
     </main>
     <footer id="footer">
         <div class="text_wrapper">
             <div class="head_text">
-                <a href="index.html">InterLanguage</a>
+                <a href="/">InterLanguage</a>
             </div>
             <div class="hrefs">
-                <a href="courses.html">курсы</a>
-                <a href="asks.html">вопросы</a>
-                <a href="contacts.html">контакты</a>
-                <a href="#">вход в кабинет</a>
+                <a href="/courses">курсы</a>
+                <a href="/asks">вопросы</a>
+                <a href="/contacts">контакты</a>
             </div>
         </div>
         <div class="soc_net">
